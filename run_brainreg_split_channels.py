@@ -10,8 +10,8 @@ Default parameters match the CellMask DeepRed set shown by the user:
 
 Example:
   python run_brainreg_split_channels.py \
-    /Users/zhuyingjie/Desktop/atlas/media_stress_GC3Ai_Cellmask_070526/WD1.tif \
-    /Users/zhuyingjie/Desktop/atlas/media_stress_GC3Ai_Cellmask_070526/WD1_cli_output
+    input_filepath \
+    output_filepath
 """
 
 from __future__ import annotations
