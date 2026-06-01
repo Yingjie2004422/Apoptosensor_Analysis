@@ -2,23 +2,6 @@
 """
 Detect crisp GC3Ai/GFP apoptotic puncta in raw image space and export centroid coordinates.
 
-Intended workflow:
-  raw channel-0 TIFF -> this script -> raw-space centroid CSV -> napari BrainGlobe transform widget -> atlas-space points
-
-Install dependencies:
-  pip install numpy pandas tifffile scipy scikit-image matplotlib
-
-Example:
-  python gc3ai_detect_centroids.py \
-    --raw /path/sample_06_ch0.tif /path/sample_07_ch0.tif \
-    --output /path/to/centroid_outputs \
-    --method log \
-    --threshold 0.08 \
-    --min-sigma 1 --max-sigma 5 \
-    --make-mask --make-qc
-
-For a folder/glob:
-  python gc3ai_detect_centroids.py --raw "/path/to/*_ch0.tif" --output /path/to/centroid_outputs
 """
 
 from __future__ import annotations
