@@ -6,8 +6,8 @@ Run BrainReg from the terminal with:
 
 ```bash
 brainreg \
-  input_file_path \
-  output_file_path \
+  /media/maryam/BELLA2024/debug/WD3_cropped.tif \
+  /media/maryam/BELLA2024/debug \
   -v 1.25 1.25 1.25 \
   --orientation las \
   --atlas drosophila_wingdisc_instar3_2um \
@@ -19,9 +19,10 @@ brainreg \
   --freeform-use-n-steps 1 \
   --bending-energy-weight 0.97 \
   --grid-spacing -1 \
-  --smoothing-sigma-floating 2 \
-  --smoothing-sigma-reference 3 \
+  --smoothing-sigma-floating -1 \
+  --smoothing-sigma-reference -1 \
   --histogram-n-bins-floating 128 \
   --histogram-n-bins-reference 128 \
-  --debug
+  --debug \
+  --pre-processing skip
 ```

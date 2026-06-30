@@ -6,7 +6,8 @@ registration channel, and pass channel 0 as an additional channel.
 Default parameters match the CellMask DeepRed set shown by the user:
   orientation=las, voxel size=1.25 1.25 1.25, full brain,
   affine steps 1/1, freeform steps 1/1, bending energy 0.97,
-  grid spacing -1, smoothing sigmas -1, histogram bins 128.
+  grid spacing -1, smoothing sigmas -1, histogram bins 128,
+  debug enabled, and pre-processing skipped.
 
 Example:
   python run_brainreg_split_channels.py \
@@ -187,6 +188,10 @@ def main() -> int:
         "--smoothing-sigma-reference", args.smoothing_sigma_reference,
         "--histogram-n-bins-floating", args.histogram_n_bins_floating,
         "--histogram-n-bins-reference", args.histogram_n_bins_reference,
+        # Comment out this line if you do not want brainreg debug output.
+        "--debug",
+        # Comment out this line if you want brainreg to use its default pre-processing.
+        "--pre-processing", "skip",
         "--n-free-cpus", args.n_free_cpus,
     ]
 
